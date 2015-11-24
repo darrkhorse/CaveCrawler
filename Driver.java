@@ -6,8 +6,11 @@ public class Driver
 {
 	public static void main(String[] args)
 	{
-		CaveParser cp = new CaveParser("simpleJSON");
-		cp.parse();
+		System.out.println("hi");
+		CaveParser cp = new CaveParser("caveJSON");
+		JSONObject theCave = cp.parse();
+		
+		
 		/*
 		Room caveEntrance = new Room("The Cave Entrance");
 		Room room2 = new Room("Room #2");
