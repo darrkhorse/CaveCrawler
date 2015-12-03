@@ -3,12 +3,12 @@
 public class Exit 
 {
 	private String name;
-	private Room destination;
+	private int destinationID;
 	
-	public Exit(String name, Room destination)
+	public Exit(JSONObject obj)
 	{
-		this.name = name;
-		this.destination = destination;
+		this.name = ((JSONStringVariable)obj.getVariableForName("name")).getValue();
+		this.destinationID = ((JSONNumberVariable)obj.getVariableForName("destinationID")).getValue();
 	}
 
 	public String getName() 
@@ -16,10 +16,8 @@ public class Exit
 		return name;
 	}
 
-	public Room getDestination() 
+	public int getDestinationID() 
 	{
-		return destination;
+		return destinationID;
 	}
-	
-	
 }
